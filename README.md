@@ -1,16 +1,16 @@
-# ADONIS : Chapter-1 Route
+# ADONIS : Chapter-2 Controllers
 
-## installation
-[reference](https://docs.adonisjs.com/guides/getting-started/installation)
+## Create controller 
+[reference](https://docs.adonisjs.com/guides/basics/controllers)
 
-## customization kernel
+```shell
+node ace
+
+node ace make:controller Post
+```
+
 ![01](/01.png)
 
-## Route
 ![02](/02.png)
-
-![03](/03.png)
- 
-![04](/04.png)
 
 ---

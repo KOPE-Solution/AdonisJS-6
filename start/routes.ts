@@ -8,6 +8,8 @@
 */
 
 import router from '@adonisjs/core/services/router'
+const UsersController = () => import('#controllers/posts_controller')
+
 router.where('id', router.matchers.number())
 
 router.on('/').render('pages/home')
@@ -22,6 +24,7 @@ router.group(() => {
     })
 })
 
+router.get('/posts', [UsersController, 'index'])
 
 router.get('posts/:id?', ({params, request }) => {
     console.log(request.all())
