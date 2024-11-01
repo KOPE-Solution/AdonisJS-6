@@ -10,4 +10,6 @@ Before creating a new application, you should ensure that you have Node.js and n
 npm init adonisjs@latest adonis-basic
 ```
 
+![01](/01.jpg)
+
 ---
