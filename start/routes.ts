@@ -54,3 +54,5 @@ router
     })
   })
   .prefix('/api')
+
+router.get('/posts', 'PostsController.index')
