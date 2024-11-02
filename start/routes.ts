@@ -8,6 +8,8 @@
 */
 
 import router from '@adonisjs/core/services/router'
+const PostsController = () => import('#controllers/posts_controller')
+
 router.where('id', router.matchers.number())
 
 router.on('/').render('pages/home')
@@ -37,6 +39,9 @@ router.delete('abouts/:id', () => {
     return 'DELETE method for abouts'
 })
 
+
+router.resource('posts', PostsController)
+
 router.get('posts/:id?', ({ params, request }) => {
     console.log(request.all())
 
@@ -54,5 +59,3 @@ router
     })
   })
   .prefix('/api')
-
-router.get('/posts', 'PostsController.index')
