@@ -1,24 +1,21 @@
-# AdonisJS : Chaper-3 Controllers
+# AdonisJS : Chaper-4 View
 
-Reference from [docs.adonisjs.com](https://docs.adonisjs.com/guides/basics/controllers)
+Reference from [docs.adonisjs.com](https://docs.adonisjs.com/guides/views-and-templates/edgejs)
 
-## Make controller command 
+## Rendering your first template
 ```shell
-node ace make:controller Post
+node ace make:view index
+DONE:    create resources/views/index.edge
 
-DONE:    create app/controllers/posts_controller.ts
+node ace make:view posts/index 
+DONE:    create resources/views/posts/index.edge
 ```
 
-## Resource-driven controllers
-app/controllers/post_controller.ts :
-```ts
-import type { HttpContext } from '@adonisjs/core/http'
-
-export default class PostsController {
-    async index({response}: HttpContext) {
-        return response.status(200).json('This is message from index() in PostController')
-    }
-}
+resources/views/posts/index.edge :
+```html
+<h1>This is message from views on posts folder.</h1>
 ```
+
+
 
 ---

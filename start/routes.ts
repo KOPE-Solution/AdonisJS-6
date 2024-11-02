@@ -37,6 +37,8 @@ router.delete('abouts/:id', () => {
     return 'DELETE method for abouts'
 })
 
+router.get('/posts', 'PostsController.index')
+
 router.get('posts/:id?', ({ params, request }) => {
     console.log(request.all())
 
@@ -54,5 +56,3 @@ router
     })
   })
   .prefix('/api')
-
-router.get('/posts', 'PostsController.index')
